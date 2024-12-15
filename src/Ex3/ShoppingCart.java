@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-public class ShoppingCart {
+public class ShoppingCart extends Element{
 
     private Collection<ShoppingItem> items = new ArrayList<ShoppingItem>();
 
@@ -14,5 +14,14 @@ public class ShoppingCart {
 
     public Collection<ShoppingItem> getItems() {
         return Collections.unmodifiableCollection(items);
+    }
+
+    @Override
+    public double accept(Visitor v) {
+        double result = 0;
+        for (ShoppingItem item : items) {
+            result += item.accept(v);
+        }
+        return result;
     }
 }

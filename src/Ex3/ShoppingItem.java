@@ -1,6 +1,6 @@
 package Ex3;
 
-public abstract class ShoppingItem {
+public abstract class ShoppingItem extends Element{
 
     private double price;
 
