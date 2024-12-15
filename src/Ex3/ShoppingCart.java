@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-public class ShoppingCart extends Element{
+public class ShoppingCart extends Element {
 
-    private Collection<ShoppingItem> items = new ArrayList<ShoppingItem>();
+    private final Collection<ShoppingItem> items = new ArrayList<ShoppingItem>();
 
     public void addItem(ShoppingItem item) {
         items.add(item);
