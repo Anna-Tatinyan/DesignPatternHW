@@ -10,7 +10,7 @@ public class Client {
 
 // UI is expecting a Ex1.CollectionIterator.
 // TODO How can we use a Ex1.CollectionImpl object in the UI?
-        CollectionIterator collectionIterator = null;
+        CollectionIterator collectionIterator = new CollectionIteratorImpl(new String[]{"elem1", "elem2"});
 
         CollectionUI ui = new CollectionUI();
         ui.showCollection(collectionIterator);
